@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Messages Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Messages for Swarup</h1>
+    <p id="randomMessage">button e click kor chot pot</p>
+    <button onclick="generateRandomMessage()">Generate Message</button>
+
+    <script>
+        function generateRandomMessage() {
+            var friendName = 'Swarup';
+            var messages = [
+                `Hey ${friendName}! tui na thakle bohut chap hye jeto.`,
+                `${friendName}, tui free to koto help korechis vaii :)`,
+                `Poisa ami dite parbo na ${friendName}!`,
+                `${friendName} aj theke ami full dedication diye code krbo`,
+                `A vai ${friendName} biriyani kobe khawabi????`,
+            ];
+
+            var randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('randomMessage').textContent = randomMessage;
+        }
+    </script>
+</body>
+</html>
